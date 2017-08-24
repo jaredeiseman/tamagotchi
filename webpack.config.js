@@ -30,13 +30,6 @@ module.exports = {
   },
 
   module: {
-    loaders: [
-      {
-        test: /\.png$/,
-        loader: "url-loader",
-        query: { mimetype: "image/png" }
-      }
-    ],
     rules: [
       {
         test: /\.jsx?$/,
