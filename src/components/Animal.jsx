@@ -62,11 +62,13 @@ class Animal extends React.Component {
     var animalStyle = {
       height: '70%',
       backgroundColor: 'tomato',
+      display: 'flex',
+      justifyContent: 'center'
     };
 
     return (
       <div style={outerContainerStyle}>
-        <div style={animalStyle}></div>
+        <div style={animalStyle}><img style={{height: '100%'}} src='https://gwenwsisson.files.wordpress.com/2014/07/day1axolotl_hi_res-e1404313810472.png' /></div>
         <ControlsStatusContainer style={controlsStatusContainerStyle} animal={this.state.animal} handleAnimal={this.handleAnimal}/>
       </div>
     );
