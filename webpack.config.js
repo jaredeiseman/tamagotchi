@@ -31,7 +31,11 @@ module.exports = {
 
   module: {
     loaders: [
-      { test: /\.(png|jpg)$/, loader: 'url-loader?limit=8192' }
+      {
+        test: /\.png$/,
+        loader: "url-loader",
+        query: { mimetype: "image/png" }
+      }
     ],
     rules: [
       {
@@ -43,6 +47,12 @@ module.exports = {
           emitWarning: true,
           configFile: "./.eslintrc.json"
         }
+      },
+      {
+        test: /\.(jpe?g|png|gif|svg)$/i,
+        use: [
+          'url-loader?limit=10000'
+        ]
       },
       {
         test: /\.jsx?$/,
