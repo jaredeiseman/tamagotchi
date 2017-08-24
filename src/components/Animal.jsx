@@ -1,6 +1,7 @@
 import React from 'react';
 import ControlsStatusContainer from './ControlsStatusContainer';
 import AnimalModel from '../models/Animal';
+import img from '../assets/animal.png';
 
 class Animal extends React.Component {
 
@@ -68,7 +69,7 @@ class Animal extends React.Component {
 
     return (
       <div style={outerContainerStyle}>
-        <div style={animalStyle}><img style={{height: '100%'}} src='https://gwenwsisson.files.wordpress.com/2014/07/day1axolotl_hi_res-e1404313810472.png' /></div>
+        <div style={animalStyle}><img style={{height: '100%'}} src={img} /></div>
         <ControlsStatusContainer style={controlsStatusContainerStyle} animal={this.state.animal} handleAnimal={this.handleAnimal}/>
       </div>
     );
